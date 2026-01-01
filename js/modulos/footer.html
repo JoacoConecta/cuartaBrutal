@@ -1,0 +1,79 @@
+<div id="compra-modal" class="modal-overlay" style="display: none;">
+  <div class="modal-contenido">
+    <span class="cerrar-modal">&times;</span>
+    <h2>Completa tus datos</h2>
+    <p>Necesitamos esta información para coordinar el envío.</p>
+    <form id="formulario-datos">
+      <div class="input-grupo">
+        <label for="nombre">Nombre y Apellido</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Ada Lovelace" minlength="3" maxlength="50" required>
+      </div>
+
+      <div class="input-grupo">
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ej: 11 2345 6789" minlength="8" maxlength="20" inputmode="tel" required>
+      </div>
+
+      <div class="input-grupo">
+        <label for="direccion">Dirección de Envío</label>
+        <input type="text" id="direccion" name="direccion" placeholder="Ej: Av. Siempreviva 742" minlength="5" maxlength="100" required>
+      </div>
+
+      <div class="input-grupo">
+        <label for="codigo-postal">Código Postal</label>
+        <input type="text" id="codigo-postal" name="codigoPostal" placeholder="Ej: 1414" maxlength="8" inputmode="numeric" required>
+      </div>
+
+      <p class="nota-envio">
+        🚚 El envío se coordinará por WhatsApp al número que ingreses.  
+        El costo se abona aparte.
+      </p>
+
+      <button type="submit" class="boton-enviar">Confirmar Datos</button>
+    </form>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="footer-wrapper">
+    <div class="footer-top">
+      <div class="footer-section">
+        <h3>AYUDA</h3>
+        <a href="#">Preguntas Frecuentes</a>
+        <a id="link-soporte" href="#">Soporte</a>
+        <a href="#">Políticas</a>
+      </div>
+      <div class="footer-section">
+        <h3>TU PÁGINA</h3>
+        <a href="/index.html">Home</a>
+        <a href="#">Sobre Nosotros</a>
+        <a href="#">Servicios</a>
+      </div>
+      <div class="footer-section">
+        <h3>CONTACTO</h3>
+        <a a class="dato-telefono" href="tel:+5492293947362">📞 +54 9 2293 947362</a>
+        <a class="dato-mail" href="mailto:contacto@tuweb.com">✉ contacto@tuweb.com</a>
+        <a id="link-instagram-texto" href="#"> Instagram</a>
+      </div>
+    </div>
+
+    <div class="footer-social">
+      <a id="link-instagram-icon" href="#"><img src="/imagenes/insta.png" alt="Instagram" /></a>
+      <a id="link-tiktok-icon" href="#"><img src="/imagenes/tik.png" alt="TikTok" /></a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 K.nect@. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+<div class="form-field-trap" aria-hidden="true">
+  <label for="contact_preference">Preferencia de Contacto</label>
+  <input
+    type="text"
+    id="contact_preference"
+    name="contact_preference"
+    tabindex="-1"
+    autocomplete="off"
+  />
+</div>

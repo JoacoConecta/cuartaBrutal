@@ -1,0 +1,119 @@
+/* ============================================================
+   🧱 SYSTEM — BRUTAL / INDUSTRIAL (GLOBAL TOKENS)
+   ============================================================ */
+
+:root{
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-text: #0b0b0b;
+  --color-muted: #2c2c2c;
+  --color-border: #0b0b0b;
+  --color-dark: #0b0b0b;
+
+  --brand-primary: #009ee3;
+  --brand-primary-600:#007bb8;
+  --brand-primary-700:#006a9e;
+
+  --brand-wa: #67c94d;
+  --brand-wa-600:#64c34a;
+
+  --promo-50: #d9263e;
+  --promo-50-dark:#991b2c;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+  --fs-12: 0.75rem;
+  --fs-13: 0.8125rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+
+  --shadow-sm: none;
+  --shadow-md: none;
+
+  --ease: cubic-bezier(.2,.7,.3,1);
+  --t-100: .12s;
+  --t-200: .18s;
+
+  --header-h: 10.5vh;
+
+  --z-header: 1000;
+  --z-overlay: 1500;
+  --z-modal: 1600;
+
+  --bp-md: 768px;
+}
+
+/* ============================================================
+   BUTTONS — BRUTAL
+   ============================================================ */
+
+.wa-button,
+.mp-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+
+  padding: 14px 18px;
+
+  border: 2px solid var(--color-dark);
+  border-radius: 0;
+
+  font-family: var(--font-mono);
+  font-weight: 800;
+  font-size: .8rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  user-select: none;
+
+  transition: transform var(--t-100) linear, background var(--t-100) linear, color var(--t-100) linear;
+}
+
+
+/* WhatsApp: fondo blanco + borde negro + texto negro, acento al hover */
+.wa-button{
+  background: #fff;
+  color: #000;
+}
+.wa-button:hover{
+  background: var(--brand-wa);
+  color: #000;
+  transform: translateY(-1px);
+}
+.wa-button:hover .wa-logo{ filter: none; }
+.wa-button:active{ transform: translateY(1px); }
+
+/* MercadoPago: igual de “técnico”, acento azul al hover */
+.mp-button{
+  background: #fff;
+  color: #000;
+}
+.mp-button:hover{
+  background: var(--brand-primary);
+  color: #000;
+  transform: translateY(-1px);
+}
+.mp-button:hover .mp-logo{ filter: none; }
+.mp-button:active{ transform: translateY(1px); }
+
+#boton_MP_container{
+  display:flex;
+  justify-content:center;
+  margin-top: 12px;
+}
+
+/* focus accesible sin glow */
+.wa-button:focus-visible,
+.mp-button:focus-visible{
+  outline: 3px solid #000;
+  outline-offset: 2px;
+}

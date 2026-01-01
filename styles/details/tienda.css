@@ -1,0 +1,124 @@
+/*tienda css*/
+.carrusel {flex-wrap: wrap !important; width: 98vw!important}
+#display-switcher{
+  display: flex !important
+}
+@media (max-width: 767px){
+    .carrusel {display: grid !important}
+}
+/* =========================================================
+   LOGICA DE VISIBILIDAD (SOLUCIÓN DE PESO)
+   ========================================================= */
+
+/* 1. ESTADO BASE (MÓVIL) */
+/* Le decimos específicamente a las opciones dentro del switcher */
+
+/* Ocultamos los de escritorio */
+.header-total .display-switcher .opcion.desktop-only {
+  display: none;
+}
+
+/* Mostramos los de móvil */
+.header-total .display-switcher .opcion.mobile-only {
+  display: inline-flex; /* O inline-block, según prefieras */
+}
+
+/* 2. ESTADO ESCRITORIO (min-width: 768px) */
+@media (min-width: 768px) {
+  
+  /* Mostramos los de escritorio */
+  .header-total .display-switcher .opcion.desktop-only {
+    display: inline-flex;
+  }
+
+  /* Ocultamos los de móvil */
+  .header-total .display-switcher .opcion.mobile-only {
+    display: none;
+  }
+}
+/* =========================================
+   2. GRID SYSTEM (CLEAN - SIN !IMPORTANT)
+   ========================================= */
+
+/* Usamos el ID para ganar especificidad sin romper las reglas */
+#carrusel-principal.modo-grid {
+  display: grid;
+  
+  /* DEFAULT MÓVIL */
+  --num-cols: 1;
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  gap: 1rem;
+  
+  /* Reseteos del carrusel */
+  overflow-x: visible;
+  flex-wrap: wrap;
+  padding-bottom: 4rem;
+  align-items: start;
+}
+
+/* Reseteo de los hijos (Items) */
+#carrusel-principal.modo-grid .contenedor_producto {
+  flex: unset; /* Anula el flex: 0 0 80% original */
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  aspect-ratio: 4/5;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* --- ESCRITORIO --- */
+@media (min-width: 768px) {
+  #carrusel-principal.modo-grid {
+    /* DEFAULT PC */
+    --num-cols: 4;
+    
+    width: 75vw; /* Sobrescribe el 100% de arriba */
+    margin: 3vh auto 0 auto;
+    gap: 1.5rem;
+    padding: 0; /* Quitamos padding lateral de móvil */
+  }
+}
+
+
+
+
+
+
+/* -------------------------------------------------
+   🎨 APÉNDICE COLORES – PRODUCT CARD
+-------------------------------------------------- */
+
+.producto-colores-append {
+  display: flex;
+  gap: .35rem;
+  margin-top: .5rem;
+  padding-left: .1rem;
+  justify-content: center;
+  /* evita que rompa el layout */
+  flex-wrap: wrap;
+}
+
+/* Dot individual */
+.producto-colores-append .color-dot {
+  width: .65rem;
+  height: .65rem;
+  border-radius: 50%;
+
+  /* look limpio / fashion */
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15);
+  background-clip: padding-box;
+
+  /* no interacción todavía */
+  pointer-events: none;
+}
+
+/* Dark mode friendly (opcional, no rompe nada) */
+@media (prefers-color-scheme: dark) {
+  .producto-colores-append .color-dot {
+    box-shadow: 0 0 0 1px rgba(255,255,255,.25);
+  }
+}

@@ -1,0 +1,127 @@
+/* ============================================================
+   RECOMENDADOS — BRUTAL / INDUSTRIAL
+   ============================================================ */
+
+.seccion-recomendados{
+  width: 100%;
+  max-width: var(--container);
+  margin: 72px auto;
+  padding: 0 18px;
+  box-sizing: border-box;
+  border-top: 2px solid #000;
+  padding-top: 32px;
+}
+
+.titulo-seccion{
+  font-family: var(--font-mono);
+  font-size: .8rem;
+  font-weight: 900;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color:#000;
+  text-align:center;
+  margin-bottom: 22px;
+}
+
+.carrusel_contenedor{
+  position:relative;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+}
+
+.slide{ width:100%; overflow:hidden; }
+
+.carrusel{
+  display:flex;
+  gap: 12px;
+  transition: transform var(--t-200) linear;
+  will-change: transform;
+}
+
+/* card */
+.contenedor_producto_foto{
+  position:relative;
+  width:100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 0;
+  background:#fff;
+  cursor:pointer;
+  overflow:hidden;
+  border: 2px solid #000;
+}
+#distinto{ overflow:visible; }
+
+.contenedor_producto_foto img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition: opacity var(--t-100) linear;
+}
+.contenedor_producto_foto .hovered{
+  position:absolute;
+  inset:0;
+  opacity:0;
+}
+.contenedor_producto_foto:hover .hovered{ opacity:1; }
+.contenedor_producto_foto:hover .sin_hover{ opacity:0; }
+
+/* texto */
+.descrippcion_producto{
+  margin-top: 10px;
+  text-align:center;
+}
+.nombre_producto{
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 800;
+  color:#000;
+  margin-bottom: 6px;
+}
+.precio_producto{
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  font-weight: 900;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color:#000;
+}
+.precio_transferencia{
+  font-family: var(--font-mono);
+  font-size: .65rem;
+  font-weight: 900;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color:#000;
+  opacity: .75;
+  margin-top: 6px;
+}
+
+/* botones carrusel */
+.boton-carrusel{
+  position:absolute;
+  transform: translateY(-50%);
+  background: #fff;
+  color:#000;
+  border: 2px solid #000;
+  font-family: var(--font-mono);
+  font-weight: 900;
+  width: 44px;
+  height: 44px;
+  cursor:pointer;
+  border-radius: 0;
+  z-index:10;
+  transition: background var(--t-100) linear, color var(--t-100) linear;
+}
+.boton-carrusel:hover{ background:#000; color:#fff; }
+.boton-carrusel.prev{ left: 10px; }
+.boton-carrusel.next{ right: 10px; }
+
+@media (max-width: 767px){
+  .carrusel{ gap: 10px; }
+  .contenedor_producto_foto{ aspect-ratio: 3 / 4; }
+  .boton-carrusel{ display:none; }
+}
+.swiper-slide{
+  padding-top: 3vh!important;
+}

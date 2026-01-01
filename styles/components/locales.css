@@ -1,0 +1,140 @@
+/* ============================================================
+   LOCALES / MAPA — BRUTAL / INDUSTRIAL
+   ============================================================ */
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+
+body{
+  font-family: var(--font-sans);
+  background:#fff;
+  color:#000;
+  line-height: 1.5;
+}
+
+/* estructura */
+#main_tiendas{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  min-height: 90vh;
+  background:#fff;
+}
+
+#info_tiendas{
+  width:100%;
+  padding: 22px 5vw;
+  background:#fff;
+  border-right: 2px solid #000;
+}
+
+.encabezado-tiendas h1{
+  font-family: var(--font-sans);
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+  letter-spacing: -.02em;
+}
+
+.encabezado-tiendas p{
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color:#000;
+  opacity:.75;
+  margin-bottom: 18px;
+}
+
+/* tarjetas */
+.contenedor-tarjetas{
+  display:flex;
+  flex-direction:column;
+  gap: 12px;
+}
+
+.tarjeta-tienda{
+  display:grid;
+  grid-template-columns: auto 1fr;
+  align-items:center;
+  gap: 12px;
+
+  padding: 14px 14px;
+
+  border: 2px solid #000;
+  border-left: 10px solid #000;
+
+  cursor:pointer;
+  background:#fff;
+
+  transition: background var(--t-100) linear, color var(--t-100) linear;
+}
+
+.tarjeta-tienda:hover{
+  background:#000;
+  color:#fff;
+}
+
+.tarjeta-tienda.active{
+  border-left-color: var(--promo-50);
+  outline: 3px solid var(--promo-50);
+  outline-offset: 2px;
+}
+
+.icono-tienda{
+  color:#000;
+  font-size: 1.4rem;
+}
+.tarjeta-tienda:hover .icono-tienda{ color:#fff; }
+
+.detalles-tienda h2{
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.detalles-tienda .direccion{
+  font-family: var(--font-sans);
+  font-size: .95rem;
+  opacity:.85;
+}
+
+.detalles-tienda .horario{
+  font-family: var(--font-mono);
+  font-size: .65rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  opacity:.8;
+  margin-top: 8px;
+}
+
+#mapa_tiendas{
+  width:100%;
+  height: 50vh;
+  background:#fff;
+  border-top: 2px solid #000;
+}
+
+#mapa_tiendas iframe{
+  width:100%;
+  height:100%;
+  border:0;
+  filter: grayscale(1) contrast(1.05);
+}
+
+@media (min-width: 768px){
+  #main_tiendas{ flex-direction: row; height: 92vh; }
+  #info_tiendas{
+    width: 58%;
+    max-width: 36vw;
+    height: 100%;
+    overflow-y: auto;
+  }
+  #mapa_tiendas{ width: 60%; height: 100%; border-top:0; border-left:2px solid #000; }
+  .encabezado-tiendas h1{ font-size: 2.8rem; }
+}
+
+@media (max-width: 768px){
+  .tarjeta-tienda{ padding: 12px 12px; }
+  .icono-tienda{ font-size: 1.2rem; }
+}

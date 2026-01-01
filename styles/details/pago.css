@@ -1,0 +1,163 @@
+/* ===============================================================
+   📄 LAYOUT GENERAL (Full Screen Centered)
+   =============================================================== */
+.page.pago-resultado {
+  /* Ocupar todo el alto menos header/footer aprox */
+  min-height: 80vh;
+  width: 100%;
+  
+  /* Centrado perfecto */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* Espaciados responsive */
+  padding-top: clamp(6rem, 12vh, 9rem);
+  padding-bottom: clamp(4rem, 6vh, 6rem);
+
+  
+  background-color: var(--color-bg, #fff);
+  
+  /* Animación de entrada suave */
+  animation: fadeInPage 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes fadeInPage {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===============================================================
+   🎨 TIPOGRAFÍA Y TEXTOS
+   =============================================================== */
+.pago-titulo {
+  font-family: "Inter", "Roboto", sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--color-dark, #111);
+  margin: 0 0 1.5rem 0;
+  line-height: 1.1;
+  
+  /* Preparar para el icono */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.pago-texto {
+  font-family: "Inter", "Roboto", sans-serif;
+  font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+  font-weight: 400;
+  color: #666;
+  line-height: 1.6;
+  max-width: 580px;
+  margin: 0 auto 0.8rem auto;
+}
+
+/* Separación extra para el último párrafo antes del botón */
+.pago-texto:last-of-type {
+  margin-bottom: 3.5rem;
+}
+
+/* ===============================================================
+   🎭 ICONOS DE ESTADO (Pseudo-elementos)
+   =============================================================== */
+
+/* Base para todos los iconos */
+.pago-titulo::before {
+  content: '';
+  display: block;
+  width: 4rem;   /* Tamaño del icono */
+  height: 4rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* --- 1. ESTADO: PENDIENTE (🟡 Spinner CSS Puro) --- */
+.pago-pendiente::before {
+  border-radius: 50%;
+  border: 3px solid rgba(245, 158, 11, 0.2); /* Naranja suave fondo */
+  border-top-color: #f59e0b; /* Naranja fuerte frente */
+  background-image: none !important; /* Sin SVG */
+  animation: spin 1s linear infinite;
+}
+
+/* --- 2. ESTADO: APROBADO (🟢 SVG Check) --- */
+.pago-aprobado::before {
+  /* SVG encodeado: Check verde minimalista dentro de círculo */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 11.08V12a10 10 0 1 1-5.93-9.14'%3E%3C/path%3E%3Cpolyline points='22 4 12 14.01 9 11.01'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+/* --- 3. ESTADO: RECHAZADO (🔴 SVG Cruz) --- */
+.pago-rechazado::before {
+  /* SVG encodeado: Cruz roja minimalista dentro de círculo */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ef4444' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='15' y1='9' x2='9' y2='15'%3E%3C/line%3E%3Cline x1='9' y1='9' x2='15' y2='15'%3E%3C/line%3E%3C/svg%3E");
+}
+
+/* Animación del spinner */
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ===============================================================
+   🔘 BOTÓN ACCIÓN (Brutalista)
+   =============================================================== */
+.pago-accion {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: var(--color-dark, #111);
+  color: #fff;
+  border: 1px solid var(--color-dark, #111);
+  
+  padding: 1.1rem 3.5rem;
+  min-width: 220px;
+  
+  font-family: "Inter", "Roboto", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+}
+
+.pago-accion:hover {
+  background-color: transparent;
+  color: var(--color-dark, #111);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.pago-accion:active {
+  transform: translateY(0);
+}
+
+/* ===============================================================
+   📱 RESPONSIVE (Móvil)
+   =============================================================== */
+@media (max-width: 768px) {
+  .page.pago-resultado {
+
+    min-height: 70vh; /* Ajuste para pantallas móviles pequeñas */
+    justify-content: center; /* Mantener centrado vertical */
+  }
+
+  .pago-titulo::before {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  
+  .pago-accion {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.2rem 0; /* Botón más alto para dedos */
+  }
+}

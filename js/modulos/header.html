@@ -1,0 +1,137 @@
+<header class="header-total">
+  <div id="sup_scroll">
+    <div class="scrolling-text">
+      <span>ENVÍOS GRATIS A TODO EL PAÍS //</span>
+      <span>HASTA 12 CUOTAS SIN INTERÉS //</span>
+      <span>DESCUENTOS CON BANCOS SELECCIONADOS //</span>
+    </div>
+    <div class="scrolling-text" aria-hidden="true">
+      <span>ENVÍOS GRATIS A TODO EL PAÍS //</span>
+      <span>HASTA 12 CUOTAS SIN INTERÉS //</span>
+      <span>DESCUENTOS CON BANCOS SELECCIONADOS //</span>
+    </div>
+  </div>
+
+  <div id="main_header">
+    <button class="header-icon burguer" id="mobile-menu-trigger" aria-label="Abrir menú">
+      <img src="/imagenes/burguer.png" alt="" />
+    </button>
+
+    <a href="/index.html" class="logo-link" aria-label="Ir al inicio">
+      <div class="img_header">
+        <img src="" alt="Logo de la tienda" />
+      </div>
+    </a>
+
+
+<div class="search-inline" id="search-inline">
+  <button class="search-toggle" id="search-toggle" type="button" aria-label="Buscar" aria-expanded="false"></button>
+
+  <div class="search-box" id="search-box">
+    <input type="search" id="search-input" placeholder="Buscar…" autocomplete="off" />
+    <div class="search-results" id="search-results"></div>
+
+  </div>
+</div>
+
+
+    <div class="carrito-icono" id="carrito-icono">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path
+          d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+      </svg>
+      <span class="carrito-contador" id="carrito-contador" aria-live="polite">0</span>
+
+      <!-- Modal carrito -->
+      <div id="modal-carrito" class="modal-carrito-oculto" aria-hidden="true" role="dialog" aria-modal="true"
+        aria-labelledby="carrito-titulo">
+        <div class="modal-carrito-overlay" id="modal-carrito-overlay" tabindex="-1"></div>
+        <div class="modal-carrito-contenido">
+          <div class="modal-carrito-header">
+            <h2 id="carrito-titulo">Tu Carrito de Compras</h2>
+            <button id="cerrar-carrito-btn" class="cerrar-btn" aria-label="Cerrar carrito">&times;</button>
+          </div>
+
+          <div id="carrito-items-container"></div>
+          <p id="carrito-vacio-msg" style="display:none; text-align:center; padding:20px;">Tu carrito está vacío.</p>
+
+          <div class="modal-carrito-footer">
+            <div class="carrito-total">
+              <strong>Total:</strong>
+              <span id="carrito-total-precio">$0.00</span>
+            </div>
+
+            <div class="carrito-acciones">
+              <button id="vaciar-carrito-btn" class="btn-accion btn-vaciar">Vaciar Carrito</button>
+
+              <button id="finalizar-compra-btn" class="mp-button">
+                <img src="/imagenes/mp.png" alt="" class="mp-logo" />
+                Pagar con Mercado Pago
+              </button>
+            </div>
+
+            <div id="boton_MP_container">
+              <button id="mandar_wpp" class="wa-button">
+                <img src="/imagenes/wpp.png" alt="" class="wa-logo" />
+                Terminar compra en WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Modal carrito -->
+    </div>
+  </div>
+
+  <nav id="barra_menu" aria-label="Menú principal">
+    <div id="mobile-menu-header">
+      <img src="" alt="Logo de la tienda" />
+      <button id="exit-menu" aria-label="Cerrar menú"><span>&times;</span></button>
+    </div>
+
+    <ul id="contenedor_menu_interno" role="menubar">
+      <li class="nav-item" role="none"><a role="menuitem" href="/paginas/especial.html">NUEVO DROP</a></li>
+
+      <li class="nav-item dropdown" role="none">
+        <a href="#" class="dropdown-toggle" role="menuitem" aria-haspopup="true" aria-expanded="false">TIENDA</a>
+        <div class="dropdown-menu" id="sub_menu_tienda" role="group" aria-label="Submenú Tienda">
+          <div id="sub_menu_columnas">
+            <ul>
+
+            </ul>
+            <ul>
+
+            </ul>
+            <ul>
+              <li><a href="/paginas/tienda.html?categoria=remera"><b>CATEGORÍAS</b></a></li>
+              <li><a href="/paginas/tienda.html?categoria=remera">REMERAS</a></li>
+              <li><a href="/paginas/tienda.html?categoria=pantalon">BAGGYS</a></li>
+              <li class="tag-liquidacion clean">
+                <a href="/paginas/liquidacion.html">
+                  <span>LIQUIDACIÓN</span>
+                </a>
+              </li>
+
+
+
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item" role="none"><a role="menuitem" href="/paginas/liquidacion.html">LIQUIDACIÓN</a></li>
+      <li class="nav-item" role="none"><a role="menuitem" href="/paginas/locales.html ">LOCALES</a></li>
+    </ul>
+  </nav>
+<div id="display-switcher" class="display-switcher">
+  <div class="selector-columnas" role="group" aria-label="Cambiar columnas">
+    <span>VER:</span>
+    <button class="opcion mobile-only" data-cols="1">x1</button>
+    <button class="opcion mobile-only" data-cols="2">x2</button>
+    
+    <button class="opcion desktop-only" data-cols="5">x5</button>
+    <button class="opcion desktop-only active" data-cols="4">x4</button>
+    <button class="opcion desktop-only" data-cols="6">x6</button>
+  </div>
+</div>
+</header>

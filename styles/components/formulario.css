@@ -1,0 +1,151 @@
+/* ============================================================
+   FORMULARIO COMPRA — BRUTAL / INDUSTRIAL
+   ============================================================ */
+
+#compra-modal.modal-overlay{
+  position: fixed;
+  inset: 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background: rgba(0,0,0,.75);
+  backdrop-filter: none;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--t-100) linear, visibility var(--t-100) linear;
+  z-index: var(--z-modal);
+}
+
+#compra-modal.activo{
+  opacity: 1;
+  visibility: visible;
+}
+
+/* contenedor */
+#compra-modal .modal-contenido{
+  background: #fff;
+  color: #000;
+  width: 92%;
+  max-width: 520px;
+  padding: 26px 22px;
+
+  border: 2px solid #000;
+  border-radius: 0;
+
+  transform: none;
+  opacity: 1;
+
+  font-family: var(--font-sans);
+  letter-spacing: 0;
+  text-align: left;
+}
+
+/* cerrar */
+#compra-modal .cerrar-modal{
+  position:absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 44px;
+  height: 44px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-family: var(--font-mono);
+  font-weight: 900;
+  letter-spacing: .18em;
+
+  border: 2px solid #000;
+  background:#fff;
+  color:#000;
+  cursor:pointer;
+}
+#compra-modal .cerrar-modal:hover{ background:#000; color:#fff; }
+
+/* títulos */
+#compra-modal h2{
+  margin: 0 0 8px 0;
+  font-family: var(--font-mono);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: .8rem;
+  letter-spacing: .22em;
+}
+
+#compra-modal p{
+  color:#000;
+  opacity:.75;
+  font-size: var(--fs-14);
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+/* inputs */
+#compra-modal .input-grupo{
+  margin-bottom: 14px;
+}
+#compra-modal .input-grupo label{
+  display:block;
+  font-family: var(--font-mono);
+  font-size: .65rem;
+  letter-spacing: .18em;
+  color:#000;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+#compra-modal .input-grupo input{
+  width:100%;
+  padding: 12px 12px;
+  border: 2px solid #000;
+  background:#fff;
+  font-size: .95rem;
+  border-radius: 0;
+}
+#compra-modal .input-grupo input:focus{
+  outline: 3px solid #000;
+  outline-offset: 2px;
+}
+
+/* nota */
+#compra-modal .nota-envio{
+  font-family: var(--font-mono);
+  font-size: .65rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color:#000;
+  opacity:.8;
+  border-top: 2px solid #000;
+  padding-top: 12px;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+/* botón */
+#compra-modal .boton-enviar{
+  width: 100%;
+  margin-top: 16px;
+  padding: 14px 12px;
+
+  background:#000;
+  color:#fff;
+
+  border: 2px solid #000;
+  border-radius: 0;
+
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  font-weight: 900;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+
+  cursor:pointer;
+  transition: background var(--t-100) linear, transform var(--t-100) linear;
+}
+#compra-modal .boton-enviar:hover{ background: var(--promo-50); }
+#compra-modal .boton-enviar:active{ transform: translateY(1px); }

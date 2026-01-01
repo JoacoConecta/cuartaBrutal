@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- INJECT_SEO -->
+<link rel="stylesheet" href="/styles/core/knecta.css">
+  <!-- tipografía -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<link rel="preload" href="/js/main.js" as="script" />
+  <!-- estilos -->
+   <link rel="stylesheet" href="/styles/components/locales.css">
+</head>
+
+<body>
+    <div id="splash-screen" class="splash-loader">
+    <img src="/imagenes/knecta.png" alt="Cargando..." class="splash-logo" />
+    
+    <div class="spinner"></div> 
+  </div>
+  <div id="header-mount"></div>
+
+<main id="main_tiendas"></main>
+ 
+
+
+  <div id="footer-mount"></div>
+
+  <!-- terceros -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+  <!-- tu mini-framework -->
+   <script type="module" src="../js/utils/mapadatos.js"></script>
+   <script type="module" src="/js/modulos/header.js"></script>
+  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/modulos/headerCategorias.js"></script>
+  <script type="module" src="/js/components/mapa.js"></script>
+  <script type="module" src="/js/components/carrito.js" defer></script>
+  <script type="module" src="/js/components/formulario.js" defer></script>
+  <script type="module" src="/js/utils/mandarwppcarrito.js" defer></script>
+  <script type="module" src="/js/utils/wpp.js"defer></script>
+  <script type="module" src="/js/modulos/footerlinks.js"></script>
+  <script type="module" src="/js/utils/lupa.js" ></script>
+  <script type="module" src="/js/utils/lupa.search.js"></script>
+</body>
+
+</html>

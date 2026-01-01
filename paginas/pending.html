@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pago pendiente</title>
+
+    <!-- Core -->
+    <link rel="stylesheet" href="/styles/core/knecta.css" />
+    <link rel="stylesheet" href="/styles/core/base.css" />
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="/styles/details/pago.css" />
+</head>
+
+<body>
+    <!-- Splash -->
+    <div id="splash-screen" class="splash-loader">
+        <img src="/imagenes/knecta.png" alt="Cargando..." class="splash-logo" />
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <div id="header-mount"></div>
+
+    <!-- Contenido -->
+    <main class="page pago-resultado">
+        <h1 class="pago-titulo pago-pendiente">Pago pendiente</h1>
+
+        <p class="pago-texto">
+            Estamos esperando la confirmación del pago.
+        </p>
+
+        <p class="pago-texto">
+            En cuanto se acredite, nos vamos a contactar por WhatsApp
+            al número que brindaste en el formulario para coordinar la entrega.
+        </p>
+
+        <a href="/" class="pago-accion">
+            Volver al inicio
+        </a>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-mount"></div>
+
+    <!-- Core JS -->
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/modulos/header.js"></script>
+    <script type="module" src="/js/modulos/headerCategorias.js"></script>
+    <script type="module" src="/js/modulos/footerlinks.js"></script>
+</body>
+
+</html>
