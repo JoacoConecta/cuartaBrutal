@@ -147,7 +147,6 @@ header {
   padding: 4px 8px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  border-radius: 4px;
   cursor: pointer;
   transition: all var(--t-200) var(--ease);
 }
@@ -617,7 +616,7 @@ header .display-switcher .opcion:focus-visible{
   color: #111;
   background: #f4f4f5;
   border: 1px solid transparent;
-  border-radius: 0.5rem;
+
   padding: 0.75rem 1rem;
   margin-bottom: 0.5rem;
   transition: all 0.2s ease;
@@ -867,7 +866,7 @@ header .display-switcher .opcion {
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-sm);
-  border-radius: 6px;
+  border-radius: 0px;
 }
 
 /* Input: look sistema */

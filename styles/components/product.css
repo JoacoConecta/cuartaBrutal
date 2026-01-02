@@ -43,7 +43,7 @@
 #textos_superior .titulo{ font-size:1.8rem; font-weight:600; margin-bottom:.5rem; }
 #textos_superior .precio{ font-size:2rem; font-weight:700; color: var(--color-dark); }
 #textos_superior h5{ font-size:1rem; font-weight:400; color: var(--color-muted); margin-top:.25rem; }
-#textos_superior .precio_transferencia{ font-size:1.1rem; font-weight:500; color: var(--promo-10); margin-top:.75rem; }
+#textos_superior .precio_transferencia{ font-size:1.1rem; font-weight:600; color: var(--promo-10); margin-top:.75rem; background: var(--color-bg);}
 
 /* ===== Talles =========================================================== */
 #talles .talles_titulo h3{ text-transform:uppercase; font-size:.9rem; font-weight:600; margin-bottom:.75rem; color: var(--color-muted); }
@@ -250,7 +250,6 @@
 /* --------- imagen principal -------------------------------- */
 .placeholder_foto.principal{
   background: #fff;
-  border: 2px solid var(--color-dark);
   border-radius: 0;
 }
 
@@ -318,6 +317,8 @@
 #estructura_selector{
   border-radius: 0;
   border-color: var(--color-dark);
+  z-index: 50;
+  background-color: var(--color-bg);
 }
 #estructura_selector button{
   color: var(--color-dark);
